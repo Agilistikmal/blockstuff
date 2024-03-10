@@ -9,8 +9,10 @@ export default function RootLayout({
 }>) {
   return (
     <body className={`${silkscreen} bg-black text-platinum`}>
-      <Navbar />
-      <main className="min-h-dvh">{children}</main>
+      <section className="min-h-dvh">
+        <Navbar />
+        <main>{children}</main>
+      </section>
       <Footer />
     </body>
   );

@@ -8,7 +8,7 @@ export default function Navbar() {
   const pathname = usePathname();
   return (
     <>
-      <nav className="bg-transparent fixed top-0 left-0 w-full">
+      <nav className="bg-transparent">
         <div className="w-full max-w-screen-xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 items-center gap-8 py-5">
           <div className="flex items-center gap-4 w-max mx-auto md:mr-auto">
             <Link
