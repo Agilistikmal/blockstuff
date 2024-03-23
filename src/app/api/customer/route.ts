@@ -17,10 +17,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   const data: Customer = await req.json();
   const customer = await prisma.customer.create({
-    data: {
-      email: data.email,
-      username: data.username,
-    },
+    data: data,
   });
   return NextResponse.json({
     status: 200,

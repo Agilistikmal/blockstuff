@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const Server = z.object({
-  id: z.string(),
+  id: z.string().optional(),
   slug: z.string(),
   name: z.string(),
   ip: z.string().includes("."),

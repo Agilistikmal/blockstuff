@@ -21,15 +21,19 @@ model Customer {
 }
 
 model Server {
-  id      String @id @default(uuid())
+  id      String  @id @default(uuid())
+  slug    String  @unique
   ip      String
   name    String
-  website String
+  website String?
+  discord String?
+  logo    String
   items   Item[]
 }
 
 model Item {
   id           String        @id @default(uuid())
+  slug         String        @unique
   server_id    String
   server       Server        @relation(fields: [server_id], references: [id])
   title        String

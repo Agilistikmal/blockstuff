@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const Customer = z.object({
-  id: z.string(),
+  id: z.string().optional(),
   username: z.string().min(3).max(16),
   email: z.string().includes("@"),
 });

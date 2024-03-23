@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Server" ALTER COLUMN "website" DROP NOT NULL,
+ALTER COLUMN "discord" DROP NOT NULL;

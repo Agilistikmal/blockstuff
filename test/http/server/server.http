@@ -1,0 +1,17 @@
+@endpoint = http://localhost:3000/api/server
+
+### Find All Server
+GET {{endpoint}}
+
+### Create Server
+POST {{endpoint}}
+Content-Type: "application/json"
+Accept: "application/json"
+
+{
+  "slug": "luckynetwork",
+  "name": "LuckyNetwork",
+  "ip": "play.luckynetwork.net",
+  "logo": "https://static.wikia.nocookie.net/minecraftid/images/3/3a/Lucky_Network.png/revision/latest?cb=20230103115650&path-prefix=id",
+  "website": "luckynetwork.net"
+}

@@ -1,0 +1,4 @@
+@endpoint = http://localhost:3000/api/transaction/channel
+
+### Find All Transaction Channels
+GET {{endpoint}}
