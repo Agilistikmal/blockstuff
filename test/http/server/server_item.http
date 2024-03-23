@@ -1,0 +1,30 @@
+@endpoint = http://localhost:3000/api/server
+
+### Find All Server Item
+GET {{endpoint}}/luckynetwork/item
+
+### Find Server Item by slug
+GET  {{endpoint}}/luckynetwork/item/vip-rank2
+
+### Add Server Item by slug
+POST {{endpoint}}/luckynetwork/item
+Content-Type: application/json
+Accept: application/json
+
+{
+  "slug": "lucky-rank",
+  "title": "Lucky Rank",
+  "description": "Lucky Rank",
+  "features": [
+    {
+      "name": "All perks from MVP"
+    },
+    {
+      "name": "Custom Prefix"
+    }
+  ],
+  "type": "luckperms",
+  "price": 600000,
+  "stock": -1,
+  "sold": 0
+}
