@@ -3,6 +3,9 @@
 ### Find All Server
 GET {{endpoint}}
 
+### Find Server by slug
+GET {{endpoint}}/luckynetwork
+
 ### Create Server
 POST {{endpoint}}
 Content-Type: "application/json"
@@ -15,3 +18,15 @@ Accept: "application/json"
   "logo": "https://static.wikia.nocookie.net/minecraftid/images/3/3a/Lucky_Network.png/revision/latest?cb=20230103115650&path-prefix=id",
   "website": "luckynetwork.net"
 }
+
+### Edit Server by slug
+PUT {{endpoint}}/luckynetwork
+Content-Type: "application/json"
+Accept: "application/json"
+
+{
+  "website": "https://www.luckynetwork.net"
+}
+
+### Delete Server by slug
+DELETE {{endpoint}}/luckynetwork

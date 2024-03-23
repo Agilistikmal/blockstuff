@@ -1,8 +1,6 @@
-import { Server } from "@/model/server_model";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/database/prisma";
+import { ServerRequest } from "@/model/server_model";
 import { NextRequest, NextResponse } from "next/server";
-
-const prisma = new PrismaClient();
 
 export async function GET() {
   const servers = await prisma.server.findMany();
@@ -16,7 +14,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   const body = await req.json();
   try {
-    const data = Server.parse(body);
+    const data = ServerRequest.parse(body);
     const server = await prisma.server.create({
       data: data,
     });
