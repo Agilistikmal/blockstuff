@@ -1,10 +1,9 @@
-import SearchIcon from "@/icons/search";
 import { JSX, ClassAttributes, InputHTMLAttributes } from "react";
 
 export default function Input(
   props: JSX.IntrinsicAttributes &
     ClassAttributes<HTMLInputElement> &
-    InputHTMLAttributes<HTMLInputElement> & { icon: any; title?: string }
+    InputHTMLAttributes<HTMLInputElement> & { icon?: any; title?: string }
 ) {
   return (
     <>
