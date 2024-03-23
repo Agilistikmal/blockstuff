@@ -57,7 +57,6 @@ Example Error Response (Not Found)
 Example Request
 ```
 {
-  id: "f5b1140c-e499-4ae6-8ace-05bce9a0dd24",
   slug: "luckynetwork",
   ip: "play.luckynetwork.net",
   name: "LuckyNetwork SEA",

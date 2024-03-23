@@ -32,17 +32,25 @@ model Server {
 }
 
 model Item {
-  id           String        @id @default(uuid())
-  slug         String        @unique
+  id           String         @id @default(uuid())
+  slug         String         @unique
   server_id    String
-  server       Server        @relation(fields: [server_id], references: [id])
+  server       Server         @relation(fields: [server_id], references: [id])
   title        String
   description  String
+  features     ItemFeatures[]
   type         String
   price        Int
   stock        Int
   sold         Int
   transactions Transaction[]
+}
+
+model ItemFeatures {
+  id      String @id @default(uuid())
+  name    String
+  item_id String
+  item    Item   @relation(fields: [item_id], references: [id])
 }
 
 model Transaction {
