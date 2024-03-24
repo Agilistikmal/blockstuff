@@ -1,0 +1,16 @@
+@endpoint = http://localhost:3000/api/minecraft
+
+### Test
+POST {{endpoint}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "ip": "127.0.0.1",
+  "port": 25575,
+  "password": "stech",
+  "commands": [
+    "say Hello Hello 1",
+    "say This is 2"
+  ]
+}

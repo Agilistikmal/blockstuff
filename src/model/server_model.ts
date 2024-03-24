@@ -18,6 +18,11 @@ export const ServerRequest = z.object({
   logo: z.string(),
   website: z.string().optional(),
   discord: z.string().optional(),
+  rcon: z.object({
+    ip: z.string(),
+    port: z.number(),
+    password: z.string(),
+  }),
 });
 export type ServerRequest = z.infer<typeof ServerRequest>;
 

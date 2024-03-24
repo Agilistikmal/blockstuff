@@ -21,14 +21,24 @@ model Customer {
 }
 
 model Server {
-  id      String  @id @default(uuid())
-  slug    String  @unique
+  id      String     @id @default(uuid())
+  slug    String     @unique
   ip      String
   name    String
   website String?
   discord String?
   logo    String
   items   Item[]
+  rcon_id String
+  rcon    ServerRcon @relation(references: [id], fields: [rcon_id])
+}
+
+model ServerRcon {
+  id       String   @id @default(uuid())
+  ip       String
+  port     Int
+  password String
+  server   Server[]
 }
 
 model Item {
@@ -44,6 +54,7 @@ model Item {
   stock        Int
   sold         Int
   transactions Transaction[]
+  commands     String[]
 }
 
 model ItemFeatures {

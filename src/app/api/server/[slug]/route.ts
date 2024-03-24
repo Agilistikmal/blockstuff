@@ -44,7 +44,12 @@ export async function PUT(req: NextRequest, { params }: { params: Params }) {
 
   try {
     const server = await prisma.server.update({
-      data: data,
+      data: {
+        ...data,
+        rcon: {
+          update: data.rcon,
+        },
+      },
       where: {
         slug: params.slug,
       },

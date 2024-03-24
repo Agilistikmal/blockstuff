@@ -4,7 +4,7 @@
 GET {{endpoint}}/luckynetwork/item
 
 ### Find Server Item by slug
-GET  {{endpoint}}/luckynetwork/item/vip-rank2
+GET  {{endpoint}}/luckynetwork/item/lucky-rank
 
 ### Add Server Item by slug
 POST {{endpoint}}/luckynetwork/item
@@ -26,5 +26,9 @@ Accept: application/json
   "type": "luckperms",
   "price": 600000,
   "stock": -1,
-  "sold": 0
+  "sold": 0,
+  "commands": [
+    "say Hello Test 1",
+    "say Hello Test 2"
+  ]
 }

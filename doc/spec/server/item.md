@@ -6,32 +6,44 @@
 Example Success Response
 ```
 {
-  status: 200,
-  error: null,
-  data: {
-    id: "f5b1140c-e499-4ae6-8ace-05bce9a0dd24",
-    slug: "luckynetwork",
-    ip: "play.luckynetwork.id",
-    name: "LuckyNetwork SEA",
-    logo: "https://blockstuff.safatanc.com/image/server/luckynetwork.png",
-    website: "https://luckynetwork.id",
-    discord: "https://discord.gg/luckynet",
-    items: [
+  "status": 200,
+  "error": null,
+  "data": {
+    "id": "bd2ebff2-03c2-40e4-94c4-617394434df6",
+    "slug": "luckynetwork",
+    "ip": "play.luckynetwork.net",
+    "name": "LuckyNetwork",
+    "website": "https://www.luckynetwork.net",
+    "discord": null,
+    "logo": "https://static.wikia.nocookie.net/minecraftid/images/3/3a/Lucky_Network.png/revision/latest?cb=20230103115650&path-prefix=id",
+    "rcon_id": "b665c97e-4134-4a38-b6d8-1c502ad5adf8",
+    "items": [
       {
-        id: "89f6f2e1-4e8e-40ec-b778-dcb5a6794f57",
-        slug: "vip-rank",
-        title: "VIP Rank",
-        description: "VIP Rank",
-        features: [
-          {
-            id: "28f3bca3-1039-4743-83c2-ae6a2cabcb5a",
-            name: "Unlimited Fly on Skyblock",
-          }
+        "id": "b9b393cb-b898-47f0-91b1-2f70f23001d7",
+        "slug": "lucky-rank",
+        "server_slug": "luckynetwork",
+        "title": "Lucky Rank",
+        "description": "Lucky Rank",
+        "type": "rank",
+        "price": 600000,
+        "stock": -1,
+        "sold": 0,
+        "commands": [
+          "say Hello Test 1",
+          "say Hello Test 2"
         ],
-        type: "rank",
-        price: 100000,
-        stock: -1,
-        sold: 0
+        "features": [
+          {
+            "id": "3196fc54-17cf-4106-9c89-078ca32deba5",
+            "name": "All perks from MVP",
+            "item_id": "b9b393cb-b898-47f0-91b1-2f70f23001d7"
+          },
+          {
+            "id": "c2d7e986-f1e9-4083-9ec7-f8cb2d54d0f6",
+            "name": "Custom Prefix",
+            "item_id": "b9b393cb-b898-47f0-91b1-2f70f23001d7"
+          }
+        ]
       }
     ]
   }
@@ -44,32 +56,34 @@ Example Success Response
 Example Success Response
 ```
 {
-  status: 200,
-  error: null,
-  data: {
-    id: "f5b1140c-e499-4ae6-8ace-05bce9a0dd24",
-    slug: "luckynetwork",
-    ip: "play.luckynetwork.id",
-    name: "LuckyNetwork SEA",
-    logo: "https://blockstuff.safatanc.com/image/server/luckynetwork.png",
-    website: "https://luckynetwork.id",
-    discord: "https://discord.gg/luckynet",
-    items: {
-      id: "89f6f2e1-4e8e-40ec-b778-dcb5a6794f57",
-      slug: "vip-rank",
-      title: "VIP Rank",
-      description: "VIP Rank",
-      features: [
-        {
-          id: "28f3bca3-1039-4743-83c2-ae6a2cabcb5a",
-          name: "Unlimited Fly on Skyblock",
-        }
-      ],
-      type: "rank",
-      price: 100000,
-      stock: -1,
-      sold: 0
-    }
+  "status": 200,
+  "error": null,
+  "data": {
+    "id": "b9b393cb-b898-47f0-91b1-2f70f23001d7",
+    "slug": "lucky-rank",
+    "server_slug": "luckynetwork",
+    "title": "Lucky Rank",
+    "description": "Lucky Rank",
+    "type": "rank",
+    "price": 600000,
+    "stock": -1,
+    "sold": 0,
+    "commands": [
+      "say Hello Test 1",
+      "say Hello Test 2"
+    ],
+    "features": [
+      {
+        "id": "3196fc54-17cf-4106-9c89-078ca32deba5",
+        "name": "All perks from MVP",
+        "item_id": "b9b393cb-b898-47f0-91b1-2f70f23001d7"
+      },
+      {
+        "id": "c2d7e986-f1e9-4083-9ec7-f8cb2d54d0f6",
+        "name": "Custom Prefix",
+        "item_id": "b9b393cb-b898-47f0-91b1-2f70f23001d7"
+      }
+    ]
   }
 }
 ```
@@ -100,39 +114,45 @@ Example Request
   type: "rank",
   price: 100000,
   stock: -1,
-  sold: 0
+  sold: 0,
+  commands: [
+    "say Hello 123",
+    "say Hello 789"
+  ]
 }
 ```
 
 Example Success Response
 ```
 {
-  status: 200,
-  error: null,
-  data: {
-    id: "f5b1140c-e499-4ae6-8ace-05bce9a0dd24",
-    slug: "luckynetwork",
-    ip: "play.luckynetwork.id",
-    name: "LuckyNetwork SEA",
-    logo: "https://blockstuff.safatanc.com/image/server/luckynetwork.png",
-    website: "https://luckynetwork.id",
-    discord: "https://discord.gg/luckynet",
-    items: {
-      id: "89f6f2e1-4e8e-40ec-b778-dcb5a6794f57",
-      slug: "vip-rank",
-      title: "VIP Rank",
-      description: "VIP Rank",
-      features: [
-        {
-          id: "28f3bca3-1039-4743-83c2-ae6a2cabcb5a",
-          name: "Unlimited Fly on Skyblock",
-        }
-      ],
-      type: "rank",
-      price: 100000,
-      stock: -1,
-      sold: 0
-    }
+  "status": 200,
+  "error": null,
+  "data": {
+    "id": "b9b393cb-b898-47f0-91b1-2f70f23001d7",
+    "slug": "lucky-rank",
+    "server_slug": "luckynetwork",
+    "title": "Lucky Rank",
+    "description": "Lucky Rank",
+    "type": "rank",
+    "price": 600000,
+    "stock": -1,
+    "sold": 0,
+    "commands": [
+      "say Hello 123",
+      "say Hello 789"
+    ],
+    "features": [
+      {
+        "id": "3196fc54-17cf-4106-9c89-078ca32deba5",
+        "name": "All perks from MVP",
+        "item_id": "b9b393cb-b898-47f0-91b1-2f70f23001d7"
+      },
+      {
+        "id": "c2d7e986-f1e9-4083-9ec7-f8cb2d54d0f6",
+        "name": "Custom Prefix",
+        "item_id": "b9b393cb-b898-47f0-91b1-2f70f23001d7"
+      }
+    ]
   }
 }
 ```
@@ -143,18 +163,42 @@ Example Success Response
 Example Request
 ```
 {
-  slug: "vip-rank",
-  title: "VIP Rank",
-  description: "VIP Rank",
-  features: [
-    {
-      name: "Unlimited Fly on Skyblock",
-    }
-  ],
-  type: "rank",
-  price: 100000,
-  stock: -1,
-  sold: 0
+  price: 800000
+}
+```
+
+Example Success Response
+```
+{
+  "status": 200,
+  "error": null,
+  "data": {
+    "id": "b9b393cb-b898-47f0-91b1-2f70f23001d7",
+    "slug": "lucky-rank",
+    "server_slug": "luckynetwork",
+    "title": "Lucky Rank",
+    "description": "Lucky Rank",
+    "type": "rank",
+    "price": 800000,
+    "stock": -1,
+    "sold": 0,
+    "commands": [
+      "say Hello 123",
+      "say Hello 789"
+    ],
+    "features": [
+      {
+        "id": "3196fc54-17cf-4106-9c89-078ca32deba5",
+        "name": "All perks from MVP",
+        "item_id": "b9b393cb-b898-47f0-91b1-2f70f23001d7"
+      },
+      {
+        "id": "c2d7e986-f1e9-4083-9ec7-f8cb2d54d0f6",
+        "name": "Custom Prefix",
+        "item_id": "b9b393cb-b898-47f0-91b1-2f70f23001d7"
+      }
+    ]
+  }
 }
 ```
 

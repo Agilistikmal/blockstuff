@@ -16,7 +16,12 @@ Accept: "application/json"
   "name": "LuckyNetwork",
   "ip": "play.luckynetwork.net",
   "logo": "https://static.wikia.nocookie.net/minecraftid/images/3/3a/Lucky_Network.png/revision/latest?cb=20230103115650&path-prefix=id",
-  "website": "luckynetwork.net"
+  "website": "luckynetwork.net",
+  "rcon": {
+    "ip": "play.luckynetwork.net",
+    "port": 25575,
+    "password": "p4ssw0rd"
+  }
 }
 
 ### Edit Server by slug

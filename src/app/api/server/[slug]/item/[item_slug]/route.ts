@@ -12,6 +12,9 @@ export async function GET(req: NextRequest, { params }: { params: Params }) {
       server_slug: params.slug,
       slug: params.item_slug,
     },
+    include: {
+      features: true,
+    },
   });
   if (!server) {
     return NextResponse.json(

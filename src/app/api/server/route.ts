@@ -16,7 +16,12 @@ export async function POST(req: NextRequest) {
   try {
     const data = ServerRequest.parse(body);
     const server = await prisma.server.create({
-      data: data,
+      data: {
+        ...data,
+        rcon: {
+          create: data.rcon,
+        },
+      },
     });
     return NextResponse.json({
       status: 200,
