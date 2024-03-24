@@ -4,27 +4,10 @@ import Input from "@/components/input";
 import { Server } from "@/model/server_model";
 import Image from "next/image";
 import Link from "next/link";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 export default function StorePage() {
-  const [server, setServer] = useState<Server[]>([
-    {
-      id: "ln",
-      slug: "luckynet",
-      name: "LuckyNetwork",
-      ip: "play.luckynetwork.net",
-      website: "luckynetwork.net",
-      logo: "https://www.luckynetwork.net/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLN_LOGO_HEADER.23126edc.webp&w=256&q=75",
-    },
-    {
-      id: "cn",
-      slug: "crazynet",
-      name: "CrazyNetwork",
-      ip: "mc.crazynetwork.id",
-      logo: "https://minecraft-mp.com/images/favicon/327574.png?ts=1709959930",
-      discord: "https://discord.gg/cn",
-    },
-  ]);
+  const [server, setServer] = useState<Server[]>([]);
   const [filteredServer, setFilteredServer] = useState<Server[]>(server);
 
   function handleSearch(event: ChangeEvent<HTMLInputElement>) {
@@ -33,6 +16,18 @@ export default function StorePage() {
     );
     setFilteredServer(filter);
   }
+
+  useEffect(() => {
+    async function getServer() {
+      const res = await fetch("/api/server");
+      const body = await res.json();
+      if (body.status != 200) {
+      }
+      setServer(body.data);
+      setFilteredServer(body.data);
+    }
+    getServer();
+  }, []);
   return (
     <>
       <div className="w-full max-w-screen-xl mx-auto px-8 mt-5">
@@ -63,7 +58,7 @@ export default function StorePage() {
                 </div>
               </div>
               <div className="px-5 py-1 bg-flame text-platinum flex justify-between">
-                <p>6 stuff</p>
+                <p>{s._count.items} stuff</p>
                 <p>Click to View</p>
               </div>
             </Link>

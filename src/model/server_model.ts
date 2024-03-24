@@ -8,6 +8,9 @@ export const Server = z.object({
   logo: z.string(),
   website: z.string().optional(),
   discord: z.string().optional(),
+  _count: z.object({
+    items: z.number(),
+  }),
 });
 export type Server = z.infer<typeof Server>;
 

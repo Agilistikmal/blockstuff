@@ -41,14 +41,14 @@ export default function Home() {
         </div>
         <div className="hidden md:flex justify-center relative">
           <Image
-            src={`https://starlightskins.lunareclipse.studio/skin-render/relaxing/${username}/full`}
+            src={`/image/skin1.webp`}
             width={1080}
             height={1080}
             alt=""
             className="w-96 translate-x-24"
           />
           <Image
-            src={`https://starlightskins.lunareclipse.studio/skin-render/sleeping/${username}/full`}
+            src={`/image/skin2.webp`}
             width={1080}
             height={1080}
             alt=""

@@ -3,7 +3,15 @@ import { ServerRequest } from "@/model/server_model";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {
-  const servers = await prisma.server.findMany();
+  const servers = await prisma.server.findMany({
+    include: {
+      _count: {
+        select: {
+          items: true,
+        },
+      },
+    },
+  });
   return NextResponse.json({
     status: 200,
     error: null,
